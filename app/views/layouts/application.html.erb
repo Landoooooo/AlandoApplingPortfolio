@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Portfolio</title>
+  <title>Alando Appling // Developer</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,15 @@
   </head>
 
   <body>
+  <header id="main_navigation" class="clearfix">
+    <a href="#" class="name">Alando Appling</a>
+    <nav>
+        <%= link_to "Articles", posts_path %>
+        <a href="#">Projects</a>
+        <a href="#">Contact</a>
+    </nav>
+    </header>
+
     <%= yield %>
   </body>
 </html>
