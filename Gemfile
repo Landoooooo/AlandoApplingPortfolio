@@ -38,6 +38,9 @@ gem 'jbuilder', '~> 2.5'
 # User Auth
 gem 'devise', '~> 4.2'
 
+gem 'pygments.rb'
+gem 'redcarpet'
+
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
