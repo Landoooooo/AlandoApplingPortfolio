@@ -46,6 +46,8 @@ gem 'friendly_id', '~> 5.1.0'
 
 gem 'will_paginate', '~> 3.0.7'
 
+gem  'mail_form' 
+
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
