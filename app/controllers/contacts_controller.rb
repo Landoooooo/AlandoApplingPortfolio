@@ -7,7 +7,7 @@ class ContactsController < ApplicationController
         @contact = Contact.new(params[:contact])
 
         if @contact.valid?
-            @contact.deliver_now
+            @contact.deliver
         else 
             flash.now[:error] = 'Cannot send message.'
             render :new
