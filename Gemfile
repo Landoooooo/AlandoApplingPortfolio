@@ -48,6 +48,10 @@ gem 'will_paginate', '~> 3.0.7'
 
 gem  'mail_form' 
 
+gem 'bootstrap'
+
+gem 'jquery-rails'
+
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do

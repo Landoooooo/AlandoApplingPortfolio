@@ -13,6 +13,9 @@
  *= require_tree .
  *= require_self
  */
+
+ @import 'bootstrap';
+ 
  @import 'normalize';
  $dark: #424652;
  $white: #FFFFFF;
@@ -26,6 +29,7 @@
  
  body {
      font-family: 'Raleway', sans-serif;
+     overflow: hidden;
  }
 
 
@@ -74,7 +78,7 @@
  }
  
  h2 {
-     font-size: 2rem;
+     font-size: 1.5rem;
  }
  
  h3 {
@@ -123,10 +127,8 @@
          padding: 1rem;
          text-decoration: none;
          color: $dark;
-         float: left;
      }
-     nav {
-         float: right;
+     .nav {
          padding-top: 1.5rem;
          a {
              color: $dark;
@@ -134,6 +136,10 @@
              margin: 0 1rem;
              font-size: 1rem;
          }
+     }
+
+     .navbar-toggler{
+         margin-bottom:15px;
      }
  }
  
@@ -146,7 +152,7 @@
  }
  
  #main_footer {
-     margin-top:200px;
+     margin-top:25px;
      padding: 2.5em 5%;
      border-top: 1px solid $border;
      .copyright {
@@ -206,7 +212,66 @@
      margin: 4em 0 0 0;
      text-align: center;
  }
- 
+
+ div.about-content{
+    margin-top: 20px;
+}
+
+.article-content{
+    margin-top:20px;
+}
+
+h1.skills{
+    text-align: center;
+    margin-top:0px;
+    margin-bottom:0px;
+    padding-top: 20px;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+.skills{
+    margin-bottom:125px;
+}
+div.skills{
+    height: 150px;;
+}
+ul.toolbox{
+    list-style-type: none;
+    display: block;
+    padding:0;
+    margin:auto;
+    width:100%;
+    margin-left:10%;
+    margin-top:20px;
+}
+
+.toolbox li{
+    display: inline-block;
+    width:13%;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+@media (max-width: 500px){
+    .toolbox li{
+        width:100%;
+        margin-left:-10%;
+    }
+    div.skills{
+        height: 290px;
+    }
+}
+
+@media (max-width: 882px){
+    .toolbox li{
+        width:100%;
+        margin-left:-10%;
+    }
+    div.skills{
+        height: 290px;
+    }
+}
 @import 'welcome';
 @import 'posts_projects';
 @import 'pygments';

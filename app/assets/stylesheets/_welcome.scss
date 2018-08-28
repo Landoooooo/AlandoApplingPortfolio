@@ -19,6 +19,7 @@ $border: #E9E9E9;
 }
 
 .homepage_content {
+	margin-bottom: 50px;
 	h2 {
 		font-size: 1.1rem;
 		text-transform: uppercase;
@@ -52,3 +53,22 @@ $border: #E9E9E9;
 		text-decoration: none;
 	}
 }
+
+div.skills{
+	background-image: image-url("trianglify.svg");
+}
+
+
+
+@media (min-width:200px) {
+	/* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+		div.content{
+		   text-align: center;
+		}
+		.hr-text{
+			position: relative;
+			text-align: center;
+			margin: auto;
+		}
+ }
+	 

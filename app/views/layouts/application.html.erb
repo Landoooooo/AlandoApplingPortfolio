@@ -3,23 +3,35 @@
   <head>
   <title>Alando Appling // Developer</title>
   <link href='//fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   </head>
 
   <body>
   <header id="main_navigation" class="clearfix">
-    <%= link_to "Alando Appling", root_path, class: "name" %>
-    <nav>
-        <%= link_to "Articles", posts_path %>
-        <%= link_to "Projects", projects_path %>
-        <%= link_to "Contacts", new_contact_path %>
-    </nav>
-    </header>
+  
+  <nav class="navbar navbar-expand-sm">
+  <%= link_to "Alando Appling", root_path, class: "name" %>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"><i class="fa fa-navicon fa-2x"></i></span>
+    </button>
+    <div class="navbar-collapse collapse" id="myNavbar">
+      <ul class="nav navbar-nav ml-auto">
+        <li class="nav-links"><%= link_to "Articles", posts_path %></li>
+        <li class="nav-links"><%= link_to "Projects", projects_path %></li>
+        <li class="nav-links"><%= link_to "Contacts", new_contact_path %></li>
+      </ul>
+  </nav>
+
+  </header>
     
     <% if notice %>
       <p class="notice"><%= notice %></p>
@@ -27,13 +39,19 @@
       <p class="alert"><%= alert %></p>
     <% end %>
 
+  <% if current_page?(root_path) %>
+    <%= render "welcome/skills" %>
+  <% end %>
+    
+  <div class="content">
     <%= yield %>
+  </div>
 
     <footer id="main_footer">
       <p class="copyright">&copy;2018 Alando Appling</p>
       <nav>
-        <a href="http://twitter.com/lando2good" target="_blank"><i class="fa fa-twitter"></i></a>
-        <a href="#"><i class="fa fa-github"></i></a>
+        <a href="//twitter.com/lando2good" target="_blank"><i class="fa fa-twitter"></i></a>
+        <a href="//github.com/landoghini" target="_blank"><i class="fa fa-github"></i></a>
         <a href="#"><i class="fa fa-facebook"></i></a>
       </nav>
       </footer>

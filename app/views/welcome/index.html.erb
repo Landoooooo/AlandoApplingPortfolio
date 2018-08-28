@@ -1,25 +1,28 @@
 <div class="wrapper clearfix">
-    <div class="col-1 homepage_content">
-        <h2>About</h2>
-        <hr>
-        <p>I'm a Web Developer currently living in Rancho Cucamonga, California.</p>
-        <p>Never had the opportunity to have a formal education in Web Development, everything I learned was self-taught. Which means I have a level of determination that can rarely be matched.</p>
-        <p></p>
-    </div>
-    <div class="col-2 homepage_content">
-        <h2>Stuff I've Written</h2>
-        <hr>
-        <% @posts.each do |post| %>
-            <h3><a href="#"><%=link_to post.title, post %></a></h3>
-            <p class="date"><%= post.created_at.strftime("%A, %b %d") %></p>            
-        <% end %>
-    </div>
-    <div class="col-3 homepage_content">
-        <h2>Stuff I've Built</h2>
-        <hr>
-        <% @projects.each do |project| %>
-            <h3><a href="#"><%=link_to project.title, project %></a></h3>
-            <p class="date"><%= project.created_at.strftime("%A, %b %d") %></p>            
-        <% end %>                          
+    <div class="row">
+        <div class="col-sm-4 homepage_content">
+            <h2 class="welcome-title">About</h2>
+            <hr class="hr-text">
+            <div class="about-content">
+                <p>I'm a Web Developer currently living in Rancho Cucamonga, California.</p>
+                <p>Never had the opportunity to have a formal education in Web Development, everything I learned was self-taught. Which means I have a level of determination that can rarely be matched.</p>
+            </div>
+        </div>
+        <div class="col-sm-4 homepage_content">
+            <h2 class="welcome-title">Stuff I've Written</h2>
+            <hr class="hr-text">
+            <% @posts.each do |post| %>
+                <h3 class="article-content"><a href="#"><%=link_to post.title, post %></a></h3>
+                <p class="date"><%= post.created_at.strftime("%A, %b %d") %></p>            
+            <% end %>
+        </div>
+        <div class="col-sm-4 homepage_content">
+            <h2>Stuff I've Built</h2>
+            <hr class="hr-text">
+            <% @projects.each do |project| %>
+                <h3 class="article-content"><a href="#"><%=link_to project.title, project %></a></h3>
+                <p class="date"><%= project.created_at.strftime("%A, %b %d") %></p>            
+            <% end %>                          
+        </div>
     </div>
 </div>
