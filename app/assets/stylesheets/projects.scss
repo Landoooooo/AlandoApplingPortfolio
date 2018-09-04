@@ -1,3 +1,39 @@
 // Place all the styles related to the projects controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+ $dark: #424652;
+ $white: #FFFFFF;
+ $light: #9a9da4;
+ $highlight: #8bc6db;
+ $border: #E9E9E9;
+ 
+
+#posts_wrapper {
+	padding: 3em 0;
+	.project {
+		text-align: center;
+		.date {
+			font-size: .9em;
+            margin: 0; 
+        }
+        .date:nth-child{
+            padding-top:10px;
+        }
+		h2 {
+			margin: 0;
+			font-size: 2em;
+			text-transform: uppercase;
+			a {
+				text-decoration: none;
+				color: $dark;
+				&:hover {
+					color: $highlight;
+				}
+			}
+		}
+		hr.hr-text {
+            margin: auto;
+            margin-bottom: 3em;
+		}
+	}
+}

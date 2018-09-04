@@ -5,6 +5,10 @@
 		<hr class="hr-text">
 	</header>
 
+	<% @project.images.each do |image| %>
+		<%= image_tag url_for(image) %>
+	  <% end %>
+
 	<div id="content">
         <%= markdown @project.description %>
         

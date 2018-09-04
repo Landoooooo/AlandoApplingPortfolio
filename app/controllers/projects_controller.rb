@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
     before_action :find_project, only: [:show, :edit, :update, :destroy]
+    
 
     def index
         @projects = Project.all.order("created_at desc")
@@ -10,7 +11,7 @@ class ProjectsController < ApplicationController
     end
 
     def create
-        @project = Project.new project_params
+        @project = Project.new(project_params)
 
         if @project.save
             redirect_to @project, notice: "Saved Succesfully"
@@ -45,7 +46,7 @@ class ProjectsController < ApplicationController
     end
 
     def project_params
-        params.require(:project).permit(:title, :description, :link)
+        params.require(:project).permit(:title, :description, :link, images: [])
     end   
 end
 
