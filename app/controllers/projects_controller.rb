@@ -39,6 +39,12 @@ class ProjectsController < ApplicationController
         redirect_to projects_path
     end
 
+    def delete_image_attachment
+        @image = Project.last.images
+        @image.purge
+        redirect_back(fallback_location: projects_path)
+    end
+
     private
 
     def find_project

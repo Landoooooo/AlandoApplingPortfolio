@@ -5,9 +5,18 @@
 		<hr class="hr-text">
 	</header>
 
-	<% @project.images.each do |image| %>
-		<%= image_tag url_for(image) %>
-	  <% end %>
+	<div class="image-frame">
+		<% (0...@project.images.count).each do |image| %>
+			<%= image_tag @project.thumbnail(image), class: "img-fluid", :style => "border-radius:3%; margin-bottom:50px"%>	
+			<% if user_signed_in? %>
+				<%= link_to 'Remove', delete_image_attachment_project_url(image),
+						method: :delete,
+						data: { confirm: 'Are you sure?' } %>
+			<% end %>		
+		<% end %>
+	</div>
+
+
 
 	<div id="content">
         <%= markdown @project.description %>
