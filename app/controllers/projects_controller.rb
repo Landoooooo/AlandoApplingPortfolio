@@ -17,8 +17,6 @@ class ProjectsController < ApplicationController
         if @project.save
             redirect_to @project, notice: "Saved Succesfully"
         else
-
-            Please choose an image that's at least 400 pixels wide and at least 150 pixels tall.
             render 'new'
         end
     end
