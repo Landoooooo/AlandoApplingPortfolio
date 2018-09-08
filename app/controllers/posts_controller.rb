@@ -39,10 +39,16 @@ class PostsController < ApplicationController
         redirect_to posts_path
     end
 
+    def delete_image_attachment
+        @image = Post.last.images
+        @image.purge
+        redirect_back(fallback_location: posts_path)
+    end
+
     private
 
     def post_params
-        params.require(:post).permit(:title, :content, :slug)
+        params.require(:post).permit(:title, :content, :slug, images: [])
     end 
 
     def find_post

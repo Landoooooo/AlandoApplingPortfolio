@@ -129,3 +129,13 @@ $border: #E9E9E9;
 		}
 	}
 }
+
+// -- Red Carpet Markdown
+
+pre, code {
+	text-align: left;
+	padding: .6em;
+	border-radius: 4px;  
+	// answer is below
+	overflow-x: scroll;
+  }
