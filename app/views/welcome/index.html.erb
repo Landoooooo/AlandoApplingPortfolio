@@ -4,9 +4,9 @@
             <h2 class="welcome-title">About</h2>
             <hr class="hr-text">
             <div class="about-content">
-                <p>Web developer currently living in Rancho Cucamonga, California. Yes that's the city from workaholics, It's actually a real place. </p>
-                <p>I&rsquo;m a 100% self taught web developer; Who is constantly learning the best practices in web development and quickly figuring out ways to apply them into my projects.</p>
-                <p>My determination is what pushes me forward when I get stuck; I don&rsquo;t rely on motivation. </p>
+                <p>I&rsquo;m currently living in Rancho Cucamonga, California. Yes that's the city from Workaholics or Friday, It's actually a real place. </p>
+                <p>I&rsquo;m a Software Developer that's attending a 30 week immersive training program through Lambda School. I&rsquo;m constantly learning the best practices in Software Development while incorporating them into projects that I&rsquo;m currently working on.</p>
+                <p>One thing you might notice about me is my determination; It's what pushes me forward when I get stuck; I don&rsquo;t rely on motivation. </p>
             </div>
         </div>
         <div class="col-sm-4 homepage_content">
@@ -14,7 +14,7 @@
             <hr class="hr-text">
             <% @posts.each do |post| %>
                 <h3 class="article-content"><a href="#"><%=link_to post.title, post %></a></h3>
-                <p class="date"><%= post.created_at.strftime("%A, %b %d") %></p>            
+                <p class="date"><%= post.created_at.strftime("%A, %b %d") %></p>
             <% end %>
         </div>
         <div class="col-sm-4 homepage_content">
@@ -22,8 +22,8 @@
             <hr class="hr-text">
             <% @projects.each do |project| %>
                 <h3 class="article-content"><a href="#"><%=link_to project.title, project %></a></h3>
-                <p class="date"><%= project.created_at.strftime("%A, %b %d") %></p>            
-            <% end %>                          
+                <p class="date"><%= project.created_at.strftime("%A, %b %d") %></p>
+            <% end %>
         </div>
     </div>
 </div>
