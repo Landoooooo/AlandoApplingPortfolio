@@ -34,7 +34,7 @@ gem 'mini_magick', '~> 4.8'
 # Reduces boot times through caching; required in config/boot.rb
 
 # User Auth
-gem 'devise', '~> 4.2'
+gem 'devise', '~> 4.7'
 
 gem 'pygments.rb'
 gem 'redcarpet'
